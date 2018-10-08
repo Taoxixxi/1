@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/cnodejs_light.svg">
+    <!--<img src="./assets/cnodejs_light.svg">-->
     <router-view/>
   </div>
 </template>
@@ -18,6 +18,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #464646;
 }
 </style>
