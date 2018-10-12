@@ -92,11 +92,11 @@
     background: none;
     color: #fff;
     height: 50px;
-    line-height: 50px;
   }
 
   .header >>> .el-menu--horizontal > .el-menu-item.is-active {
     border: none;
+    color: #409EFF;
   }
 
   .header >>> .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus {
@@ -110,7 +110,7 @@
   .leftL {
     display: inline-flex;
     vertical-align: super;
-    justify-content: center;
+    justify-content: flex-start;
     width: 50%;
   }
 </style>

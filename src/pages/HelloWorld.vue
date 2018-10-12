@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
     <Header></Header>
-    <Tabs></Tabs>
+    <div class="content">
+      <Tabs></Tabs>
+    </div>
+
   </div>
 
 </template>
@@ -44,5 +47,13 @@
 
   a {
     color: #42b983;
+  }
+  .hello{
+    background-color: #e0e0e0;
+  }
+  .content{
+    width: 73%;
+    margin: 0 auto;
+    padding-top: 20px;
   }
 </style>
