@@ -3,6 +3,7 @@
     <Header></Header>
     <div class="content">
       <Tabs></Tabs>
+      <router-view></router-view>
     </div>
 
   </div>

@@ -3,21 +3,37 @@
     <el-row :gutter="20">
       <el-col :span="12" :offset="0">
         <div class="grid-content bg-purple bg-div">
-          <!--<ul class="second-tabs">-->
-          <!--<li index="1">全部</li>-->
-          <!--<li index="2">精华</li>-->
-          <!--<li index="3">分享</li>-->
-          <!--<li index="4">问答</li>-->
-          <!--<li index="5">招聘</li>-->
-          <!--<li index="6">客户端测试</li>-->
-          <!--</ul>-->
           <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <el-menu-item index="1">全部</el-menu-item>
-            <el-menu-item index="2">精华</el-menu-item>
-            <el-menu-item index="3">分享</el-menu-item>
-            <el-menu-item index="4">问答</el-menu-item>
-            <el-menu-item index="5">招聘</el-menu-item>
-            <el-menu-item index="6">客户端测试</el-menu-item>
+            <el-menu-item index="1">
+              <router-link to="/all">
+                全部
+              </router-link>
+            </el-menu-item>
+            <el-menu-item index="2">
+              <router-link to="/interlocution">
+                精华
+              </router-link>
+            </el-menu-item>
+            <el-menu-item index="3">
+              <router-link to="/share">
+                分享
+              </router-link>
+            </el-menu-item>
+            <el-menu-item index="4">
+              <router-link to="/quintessence">
+                问答
+              </router-link>
+            </el-menu-item>
+            <el-menu-item index="5">
+              <router-link to="/recruit">
+                招聘
+              </router-link>
+            </el-menu-item>
+            <el-menu-item index="6">
+              <router-link to="/clientTest">
+                客户端测试
+              </router-link>
+            </el-menu-item>
           </el-menu>
         </div>
       </el-col>
@@ -53,7 +69,7 @@
     list-style-type: none;
     padding: 0;
     background: none;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   li {
@@ -118,8 +134,8 @@
   }
 
   .el-menu--horizontal > .el-menu-item {
-    height: 40px;
-    line-height: 40px;
+    height: 25px;
+    line-height: 25px;
   }
 
   .bg-div {
