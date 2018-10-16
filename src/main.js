@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import * as filters from './until/filter'
+
+Object.keys(filters).forEach(k => Vue.filter(k, filters[k])) //注册过滤器
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
