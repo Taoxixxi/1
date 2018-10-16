@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div v-for="(item,index) in topicsList">
+    <div v-for="(item,index) in topicsList" class="cell">
       <img class="userimg" :src="item.author.avatar_url"/>
       <span class="count-data">{{item.reply_count}}/{{item.visit_count}}</span>
       <el-tag v-if="item.top === true">置顶</el-tag>
       <el-tag v-else-if="item.top === false">精华</el-tag>
       <span class="item-title">{{item.title}}</span>
-      <span>{{item.last_reply_at|formatDate}}</span>
+      <span class="time">{{item.last_reply_at|formatDate}}</span>
     </div>
   </div>
 </template>
@@ -46,15 +46,21 @@
   * {
     font-size: 1rem;
     background-color: #fff;
+    font-family: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti,sans-serif!important;
   }
-
+  .cell{
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
   .userimg {
     width: 30px;
+    height: 30px;
+    border-radius: 3px;
   }
 
   .item-title {
     display: inline-block;
-    width: 80%;
+    width: 70%;
     text-align: left;
     vertical-align: bottom;
   }
@@ -69,6 +75,10 @@
   }
   .count-data{
     width:70px;
+    font-size: 12px;
+    display: inline-block;
+  }
+  .time{
     font-size: 12px;
   }
 </style>
