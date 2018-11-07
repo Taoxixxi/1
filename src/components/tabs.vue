@@ -3,29 +3,29 @@
     <el-row :gutter="20">
       <el-col :span="12" :offset="0">
         <div class="grid-content bg-purple bg-div">
-          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1">
-              <router-link :to="{path:'/interlocution',query:{tab:'all'}}">
+              <router-link to="/all">
                 全部
               </router-link>
             </el-menu-item>
-            <el-menu-item index="good">
-              <router-link :to="{path:'/interlocution',query:{tab:'good'}}">
+            <el-menu-item index="/good">
+              <router-link to="/interlocution">
                 精华
               </router-link>
             </el-menu-item>
-            <el-menu-item index="share">
-              <router-link :to="{path:'/interlocution',query:{tab:'share'}}">
+            <el-menu-item index="3">
+              <router-link to="/share">
                 分享
               </router-link>
             </el-menu-item>
-            <el-menu-item index="ask">
-              <router-link :to="{path:'/interlocution',query:{tab:'ask'}}">
+            <el-menu-item index="4">
+              <router-link to="/quintessence">
                 问答
               </router-link>
             </el-menu-item>
-            <el-menu-item index="job">
-              <router-link :to="{path:'/interlocution',query:{tab:'job'}}">
+            <el-menu-item index="5">
+              <router-link to="/recruit">
                 招聘
               </router-link>
             </el-menu-item>
@@ -117,6 +117,7 @@
   .el-menu-demo li {
     color: #80bd01;
     padding: 0 15px;
+    text-align: center;
   }
 
   .el-menu-item:focus, .el-menu-item:hover {

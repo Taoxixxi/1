@@ -4,6 +4,10 @@ import HelloWorld from '@/pages/HelloWorld'
 import Header from '@/components/header'
 import interlocution from '@/pages/interlocution'
 import clientTest from '@/pages/clientTest'
+import all from '@/pages/all'
+import share from '@/pages/share'
+import quintessence from '@/pages/quintessence'
+import recruit from '@/pages/recruit'
 import detail from '@/pages/detail'
 
 Vue.use(Router)
@@ -16,9 +20,29 @@ export default new Router({
       component: HelloWorld,
       children:[
         {
+          path: '/all',
+          name: 'all',
+          component: all
+        },
+        {
           path: 'interlocution',
           name: 'interlocution',
-          component: interlocution,
+          component: interlocution
+        },
+        {
+          path: 'share',
+          name: 'share',
+          component: share
+        },
+        {
+          path: 'quintessence',
+          name: 'quintessence',
+          component: quintessence
+        },
+        {
+          path: '/recruit',
+          name: 'recruit',
+          component: recruit
         },
         {
           path: '/clientTest',
@@ -33,7 +57,7 @@ export default new Router({
       component: Header
     },
     {
-      path: '/interlocution/detail',
+      path: '/detail',
       name: 'detail',
       component: detail
     }

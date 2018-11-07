@@ -5,8 +5,9 @@
       <span class="count-data"><span class="reply-count">{{item.reply_count}}</span>/{{item.visit_count}}</span>
       <el-tag v-if="item.top === true">置顶</el-tag>
       <el-tag v-else-if="item.good === true">精华</el-tag>
-      <!--<el-tag v-else-if="item.tab === 'jod'">招聘</el-tag>-->
-      <!--<el-tag v-else-if="item.tab ==='ask'">问答</el-tag>-->
+      <el-tag v-else-if="item.tab === 'jod'">招聘</el-tag>
+        <el-tag v-else-if="item.tab ==='ask'">问答</el-tag>
+      <el-tag v-else-if="item.tab ==='share'">分享</el-tag>
       <span class="item-title">
         <router-link :to="{path:'/detail',query:{id:item.id,a:1}}">
           {{item.title}}
@@ -22,7 +23,7 @@
   import axios from 'axios'
 
   export default {
-    name: "interlocution",
+    name: "all",
     data() {
       return {
         topicsList: [],
@@ -32,7 +33,6 @@
       let _this = this;
       axios.get('https://cnodejs.org/api/v1/topics', {
         params: {
-          tab: "good",
           page: 1,
           limit: 20
         }
@@ -44,8 +44,6 @@
         .catch(function (error) {
           console.log(error);
         });
-    },
-    methods: {
     }
   }
 </script>

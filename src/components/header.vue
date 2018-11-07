@@ -1,6 +1,5 @@
 <template>
   <div class="header">
-    <header>
       <div class="leftL">
         <img class="logo-img" src="../assets/cnodejs_light.svg">
         <el-input v-model="input" class="search-input" prefix-icon="el-icon-search"></el-input>
@@ -13,7 +12,6 @@
         <el-menu-item index="5">注册</el-menu-item>
         <el-menu-item index="6">登录</el-menu-item>
       </el-menu>
-    </header>
   </div>
 
 </template>
@@ -47,7 +45,7 @@
     margin-right: 10px;
   }
 
-  header {
+  .header {
     background-color: #464646;
   }
 
