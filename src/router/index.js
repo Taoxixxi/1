@@ -9,7 +9,7 @@ import share from '@/pages/share'
 import quintessence from '@/pages/quintessence'
 import recruit from '@/pages/recruit'
 import detail from '@/pages/detail'
-
+import vuexdemo from '@/pages/vuexdemo'
 Vue.use(Router)
 
 export default new Router({
@@ -60,6 +60,12 @@ export default new Router({
       path: '/detail',
       name: 'detail',
       component: detail
+    }
+    ,
+    {
+      path: '/vuexdemo',
+      name: 'vuexdemo',
+      component: vuexdemo
     }
 
   ]

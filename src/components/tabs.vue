@@ -34,6 +34,11 @@
                 客户端测试
               </router-link>
             </el-menu-item>
+            <el-menu-item index="7">
+              <router-link to="/vuexdemo">
+                vuexDEMO
+              </router-link>
+            </el-menu-item>
           </el-menu>
         </div>
       </el-col>
